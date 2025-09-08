@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h1> the Books page</h1>
+<ul>
+    {% for book in Books %}
+    <li>
+        {{book.title}} by {{book.author}} book is about {{book.description}} is {% if book.available %} Available
+        {% else %} not Available {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

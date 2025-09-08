@@ -1,0 +1,13 @@
+<!--inheriting from base.html-->
+{% extends "base.html" %}
+{% block content %}
+<h1>To-Do List</h1>
+<ul>
+    {% for todo in todos %}
+    <li>
+<!--        outputs the title of the todo item-->
+        {{todo.title}}: {% if todo.completed %} Completed {% else %} not Completed {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
